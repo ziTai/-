@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellID" id="U6b-Vx-4bR" customClass="HeadCollectionReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tC-vH-Jld">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3tC-vH-Jld" secondAttribute="trailing" id="K3B-aI-F2V"/>
+                <constraint firstItem="3tC-vH-Jld" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="Yd2-4N-l1g"/>
+                <constraint firstItem="3tC-vH-Jld" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="lY4-z0-TLX"/>
+                <constraint firstAttribute="bottom" secondItem="3tC-vH-Jld" secondAttribute="bottom" id="zKA-OS-1nW"/>
+            </constraints>
+            <connections>
+                <outlet property="headLabel" destination="3tC-vH-Jld" id="UUy-jm-J4s"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+</document>
