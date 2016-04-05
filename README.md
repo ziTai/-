@@ -16,3 +16,5 @@
 ![Aaron Swartz](https://github.com/ziTai/-/blob/master/HomeForCar/commit_show.gif)
 找车界面
 ----
+![Aaron Swartz](https://github.com/ziTai/-/blob/master/HomeForCar/find_show.gif)
+![Aaron Swartz](https://github.com/ziTai/-/blob/master/HomeForCar/choose_show.gif)
