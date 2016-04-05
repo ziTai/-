@@ -45,8 +45,8 @@
     [super viewDidLoad];
     tabArr = [[NSMutableArray alloc]init];
     _butArr = [[NSMutableArray alloc]init];
-    self.view.backgroundColor = [UIColor whiteColor];
     _kindArr = [[NSMutableArray alloc]init];
+    self.view.backgroundColor= [UIColor whiteColor];
     [_kindArr addObject:@"推荐"];
     [_kindArr addObject:@"新车"];
     [_kindArr addObject:@"评测"];
@@ -69,7 +69,6 @@
     navScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 20,CGRectGetMaxX(self.view.frame) - 80,40)];
     [self.view addSubview:navScrollView];
     _tabScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, CGRectGetMaxY(self.view.frame) - 49 - 60)];
-    _tabScrollView.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:_tabScrollView];
     [self.view addSubview:_moreView];
     

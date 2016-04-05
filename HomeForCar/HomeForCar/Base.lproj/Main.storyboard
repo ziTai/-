@@ -47,7 +47,7 @@
         <scene sceneID="BFd-Hr-XmH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nL7-X7-Vj7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="推荐" selectedImage="arrow.png" id="qqu-q5-Z5y"/>
+                    <tabBarItem key="tabBarItem" title="推荐" image="ic_news_unselected.png" selectedImage="ic_news_selected.png" id="qqu-q5-Z5y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7vI-Oz-XH2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -100,7 +100,7 @@
                     <view key="view" contentMode="scaleToFill" id="VKS-Ca-ig6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.60562835349999999" green="1" blue="0.6905858238" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="plT-S4-ITk"/>
                 </viewController>
@@ -119,7 +119,7 @@
                     <view key="view" contentMode="scaleToFill" id="9fN-gX-GfZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.86666666670000003" green="0.27450980390000002" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="gr8-sn-P8q"/>
                 </viewController>
@@ -131,7 +131,7 @@
         <scene sceneID="lok-9f-iRv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MTo-yj-2BP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="论坛" id="OiZ-5O-Ws7"/>
+                    <tabBarItem key="tabBarItem" title="论坛" image="ic_community_unselected.png" selectedImage="ic_community_selected.png" id="OiZ-5O-Ws7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Ib-6s-55L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -150,7 +150,7 @@
         <scene sceneID="ibq-FC-D42">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NvB-Zm-pwT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="找车" id="1m8-rG-Jzc"/>
+                    <tabBarItem key="tabBarItem" title="找车" image="ic_findcar_unselected.png" selectedImage="ic_findcar_selected.png" id="1m8-rG-Jzc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="733-9E-0oL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -169,7 +169,7 @@
         <scene sceneID="pDg-tW-Izb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dbw-Ow-AfF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我" id="vo5-NA-4su"/>
+                    <tabBarItem key="tabBarItem" title="我" image="ic_user_unselected.png" selectedImage="ic_user_selected.png" id="vo5-NA-4su"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DWw-ia-2WO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -186,6 +186,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.png" width="15" height="40"/>
+        <image name="ic_community_selected.png" width="22" height="22"/>
+        <image name="ic_community_unselected.png" width="22" height="22"/>
+        <image name="ic_findcar_selected.png" width="22" height="22"/>
+        <image name="ic_findcar_unselected.png" width="22" height="22"/>
+        <image name="ic_news_selected.png" width="22" height="22"/>
+        <image name="ic_news_unselected.png" width="22" height="22"/>
+        <image name="ic_user_selected.png" width="22" height="22"/>
+        <image name="ic_user_unselected.png" width="22" height="22"/>
     </resources>
 </document>

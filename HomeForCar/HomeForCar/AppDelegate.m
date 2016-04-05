@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+#import "WeiboSDK.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +19,50 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    NSLog(@"%@",NSHomeDirectory());
+    [ShareSDK registerApp:@"dfdacef7e97b"
+     
+          activePlatforms:@[
+                            @(SSDKPlatformTypeSinaWeibo),
+                            @(SSDKPlatformTypeMail),
+                            @(SSDKPlatformTypeSMS),
+                            @(SSDKPlatformTypeCopy),
+                            @(SSDKPlatformTypeWechat),
+                            @(SSDKPlatformTypeQQ),
+                            @(SSDKPlatformTypeRenren),
+                            @(SSDKPlatformTypeGooglePlus)]
+                 onImport:nil          onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo)
+     {
+         
+         switch (platformType)
+         {
+             case SSDKPlatformTypeSinaWeibo:
+                 //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
+                 [appInfo SSDKSetupSinaWeiboByAppKey:@"2866450095"
+                                           appSecret:@"3e05c7ff550511aa67d46d35c4c24236"
+                                         redirectUri:@"http://www.baidu.com"
+                                            authType:SSDKAuthTypeBoth];
+                 break;
+             case SSDKPlatformTypeWechat:
+                 [appInfo SSDKSetupWeChatByAppId:@"wx4868b35061f87885"
+                                       appSecret:@"64020361b8ec4c99936c0e3999a9f249"];
+                 break;
+             case SSDKPlatformTypeQQ:
+                 [appInfo SSDKSetupQQByAppId:@"100371282"
+                                      appKey:@"aed9b0303e3ed1e27bae87c33761161d"
+                                    authType:SSDKAuthTypeBoth];
+                 break;
+             case SSDKPlatformTypeRenren:
+                 [appInfo        SSDKSetupRenRenByAppId:@"226427"
+                                                 appKey:@"fc5b8aed373c4c27a05b712acba0f8c3"
+                                              secretKey:@"f29df781abdd4f49beca5a2194676ca4"
+                                               authType:SSDKAuthTypeBoth];
+                 break;
+            default:
+                 break;
+         }
+     }];
+    return YES;
     return YES;
 }
 

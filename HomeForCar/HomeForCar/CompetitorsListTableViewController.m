@@ -23,6 +23,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"CoListTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     self.tableView.rowHeight = 60;
     self.tableView.sectionHeaderHeight = 20;
+
 }
 
 - (void)didReceiveMemoryWarning {

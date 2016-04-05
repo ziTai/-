@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol chooseDelgate <NSObject>
 
+-(void)goBackChoose;
+
+@end
 @interface ChooseTableViewController : UITableViewController
-
+@property(nonatomic,assign)id<chooseDelgate>delegate;
 @end

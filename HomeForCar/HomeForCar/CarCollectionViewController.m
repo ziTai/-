@@ -47,7 +47,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)tableViewIndexBar:(AIMTableViewIndexBar *)indexBar didSelectSectionAtIndex:(NSInteger)index
 {
     
-    if ([self.collectionView numberOfSections] > index && index > -1){   // for safety, should always be YES
+    if ([self.collectionView numberOfSections] > index && index > -1){
         [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:index] atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:YES];
     }
 }

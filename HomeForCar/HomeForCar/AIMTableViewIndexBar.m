@@ -183,7 +183,7 @@
          {
 //             NSUInteger a = ABS(index - idx);
              NSUInteger a =  abs(index - idx);
-//             NSLog(@"%ld",a);
+
              
              if (a < 4)
              {

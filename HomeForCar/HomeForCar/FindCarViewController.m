@@ -81,10 +81,28 @@
     
     ChooseTableViewController *chooseCtr = [[ChooseTableViewController alloc]initWithStyle:UITableViewStylePlain];
     chooseCtr.tableView.frame = CGRectMake(CGRectGetMaxX(self.view.frame) * 1, 0, CGRectGetMaxX(self.view.frame) , CGRectGetMaxY(self.view.frame) - 49 -CGRectGetMaxY(_butScrollView.frame) );
+    [_tabArr addObject:chooseCtr];
     [self addChildViewController:chooseCtr];
     [_tabScrollView addSubview:chooseCtr.tableView];
     
+    UIButton *but = [UIButton buttonWithType:UIButtonTypeCustom];
+    [but setBackgroundColor:[UIColor grayColor]];
+    [but setTitle:@"重置" forState:UIControlStateNormal];
+    [but addTarget:self action:@selector(newChoose) forControlEvents:UIControlEventTouchUpInside];
+    [but setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    but.frame = CGRectMake(CGRectGetMaxX(self.view.frame) * 1 + 10, self.view.frame.size.height - 200, 80, 40);
+    but.alpha = 0.6;
+    [_tabScrollView addSubview:but];
     
+    
+    UIButton *countBut = [UIButton buttonWithType:UIButtonTypeCustom];
+    [countBut setBackgroundColor:[UIColor redColor]];
+    [countBut setTitle:[NSString stringWithFormat:@"共有1024款车系符合要求>"] forState:UIControlStateNormal];
+    countBut.titleLabel.font = [UIFont systemFontOfSize:15];
+    [countBut setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    countBut.frame = CGRectMake(CGRectGetMaxX(self.view.frame) * 1 + 100, self.view.frame.size.height - 200, 200, 40);
+    countBut.alpha = 0.6;
+    [_tabScrollView addSubview:countBut];
     
     NSArray *Arr = [[NSArray alloc]initWithObjects:@"热",@" *",@"A",@"B",@"C",@"D",@"F",@"G",@"H",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"W",@"X",@"Y",@"Z", nil];
     indexBar = [[AIMTableViewIndexBar alloc]initWithFrame:CGRectMake(CGRectGetMaxX(carCtr.tableView.frame) - 20,(_tabScrollView.frame.size.height - Arr.count * 15)/2.0, 20, Arr.count * 15)];
@@ -105,6 +123,11 @@
 -(void)find
 {
     
+}
+-(void)newChoose
+{
+    ChooseTableViewController *chooseCtr = [_tabArr objectAtIndex:1];
+    [chooseCtr.delegate goBackChoose];
 }
 -(void)change:(UIButton*)but
 {
@@ -133,7 +156,7 @@
     }
     else
     {
-        NSLog(@".....");
+        
     }
 }
 -(void)getCarListFinish:(NSNotification*)noti
