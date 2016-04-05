@@ -8,7 +8,7 @@
 部分功能由于无法抓包未实现,欢迎交流--763595196@qq.com
 
 -----
-
+![Aaron Swartz](https://github.com/ziTai/ZT_IndexBar/raw/master/ZT_indexBar.gif)
 新闻界面
 ----
 社区界面
